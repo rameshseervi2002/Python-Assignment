@@ -1,0 +1,326 @@
+Python Basics 
+1. Write a program to print your name. 
+print("Ramesh Seervi") 
+
+2. Write a program for a Single line comment and multi- line comments 
+# Write Python code here(Single-line comments) 
+""" Multi-line comment used print("Python Comments") *1234567890 """ 
+print("Single and Multi-line comments") 
+
+3. Define variables for different Data Types int, Boolean, char, float, double and print on the Console. 
+a = 5 print("Type of a: ", type(a)) 
+b = 5.0 print("Type of b: ", type(b)) 
+c = True print("Type of c: ", type(c)) 
+d="I am a string" print("Type of d: ", type(d)) 
+
+4. Define the local and Global variables with the same name and print both variables and understand the scope of the variables 
+# local variable 
+def f():
+    s = "I love JALA Technologies" print(s) 
+    f() 
+ # This function uses global variable s 
+ def g(): 
+    print("Inside Function", s) 
+    # Global scope
+    s = "I love JALA Technologies" 
+    g() 
+    print("Outside Function", s) 
+Operators 
+1. Write a function for arithmetic operators(+,-,*,/) 
+num1 = 4 
+num2 = 2 
+# Add two numbers 
+sum = float(num1) + float(num2)
+# Subtract two numbers 
+min = float(num1) - float(num2) 
+# Multiply two numbers 
+mul = float(num1) * float(num2) 
+div = float(num1) / float(num2) 
+print('The sum is'.format(num1, num2, sum)) 
+print('The subtraction is'.format(num1, num2, min)) 
+print('The multiplication is'.format(num1, num2, mul)) 
+print('The division is'.format(num1, num2, div)) 
+
+2. Write a method for increment and decrement operators(++, --)
+a = 0 
+print(a) 
+#Increment a+=1 
+print(a) 
+a++1 
+print(a) 
+#Decrement 
+a -= 1 ]
+print(a) a--1 
+print(a) 
+
+3. Write a program to find the two numbers equal or not. 
+a = 4 
+b = 2 
+if a == b:
+   print("the two numbers equal") 
+else:
+   print("the two numbers not equal")
+   
+4. Program for relational operators (<,<==, >, >==) 
+x = 5 
+y = 3 
+print(x == y) 
+print(x != y)  
+print(x < y) 
+print(x > y) 
+print(x <= y) 
+print(x >= y) 
+
+5. Print the smaller and larger number 
+a = 33 
+b = 56 
+if b > a:
+   print("b is greater than a")
+elif a == b:
+   print("a and b are equal") 
+else: 
+   print("a is greater than b") 
+   
+Loops 
+1. Write a program to print “Bright IT Career” ten times using for loop 
+x="Bright IT Career" 
+for i in range(10):
+   print(x) 
+
+2. Write a java program to print 1 to 20 numbers using the while loop. 
+i = 0 
+while i < 20: 
+   print(i) 
+   i += 1 
+   
+3. Program to equal operator and not equal operators 
+a = 56 
+b = 56 
+if a == b:
+   print("a and b are equal") 
+else:
+   print("a and b are not equal") 
+   
+4. Write a program to print the odd and even numbers. 
+n = 56 
+if(n%2)==0:
+   print("The number is even") 
+else: 
+   print("The provided number is odd") 
+   
+5. Write a program to print largest number among three numbers. 
+num1 = 52 
+num2 = 80 
+num3 = 67 
+if (num1 > num2) and (num1 > num3): 
+   largest = num1 
+elif (num2 > num1) and (num2 > num3):
+   largest = num2 
+else:
+   largest = num3 
+print("The largest number is",largest) 
+
+6. Write a program to print even number between 10 and 20 using while 
+x = 10 
+i = 1 
+while i <= x:
+   if i % 2 == 0:
+      print(i, end=" \n")
+      i = i + 1 
+ 
+7. Write a program to print 1 to 10 using the do-while loop statement. 
+i = 1 
+while True:
+   print(i)
+   i = i + 1 
+   if(i > 10):
+      break
+      
+8. Write a program to find Armstrong number or not 
+num = 153 
+sum = 0 
+temp = num 
+while temp > 0:
+   digit = temp % 10 
+   sum += digit ** 3 
+   temp //= 10 
+   # display the result 
+   if num == sum: 
+      print(num,"is an Armstrong number") 
+   else:
+      print(num,"is not an Armstrong number") 
+
+9. Write a program to find the prime or not. 
+num = 29 
+flag = False 
+if num > 1:
+   for i in range(2, num):
+      if (num % i) == 0:
+         flag = True
+         break 
+      if flag:
+         print(num, "is not a prime number") 
+      else:
+         print(num, "is a prime number")
+
+10. Write a program to palindrome or not. 
+str = 'abcba' 
+str = str.casefold() 
+rev_str = reversed(str) 
+if list(str) == list(rev_str): 
+   print("The string is a palindrome.") 
+else:
+   print("The string is not a palindrome.") 
+
+11. Program to check whether a number is EVEN or ODD using switch 
+num = int(input("Enter a number: ")) 
+if (num % 2) == 0: 
+   print("{0} is Even".format(num))
+else:  
+print("{0} is Odd".format(num)) 
+
+12. Print gender (Male/Female) program according to given M/F using switch 
+gender = input("What is your gender? ") 
+if 'male' in gender:
+   print("You are a boy!")
+if 'female' in gender: 
+   print("You are a girl!") 
+4.Arrays 
+1. Write a function to add integer values of an array 
+cars = ["Ford", "Volvo", "BMW"] 
+cars.append("Honda") 
+print(cars) 
+
+2. Write a function to calculate the average value of an array of integers 
+def Average(lst):
+   return sum(lst) / len(lst) 
+   lst = [15, 9, 55, 41, 35, 20, 62, 49] 
+   average = Average(lst) 
+   print("Average of the list =", round(average, 2)) 
+
+3. Write a program to find the index of an array element 
+list1 = [1, 2, 3, 4, 1, 1, 1, 4, 5] 
+print(list1.index(4)) 
+list2 = ['cat', 'bat', 'mat', 'cat', 'pet'] 
+print(list2.index('cat')) 
+
+4.Write a function to test if array contains a specific value 
+test_list = [ 1, 6, 3, 5, 3, 4 ] 
+print("Checking if 4 exists in list ( using loop ) : ") 
+for i in test_list:
+   if(i == 4) :   
+      print ("Element Exists") 
+      print("Checking if 4 exists in list ( using in ) : ")
+   if (4 in test_list): 
+   
+5.Write a function to remove a specific element from an array 
+cars = ["Ford", "Volvo", "BMW"] 
+cars.pop(1) 
+print(cars) 
+
+6. Write a function to copy an array to another array
+fruits = ['apple', 'banana', 'cherry', 'orange'] 
+x = fruits.copy() 
+print(x) 
+
+7. Write a function to insert an element at a specific position in the array 
+list1 = [ 1, 2, 3, 4, 5, 6, 7 ] 
+list1.insert(4, 10) 
+print(list1) 
+list2 = ['a', 'b', 'c', 'd', 'e'] 
+list2.insert(0, 'z') 
+print(list2) 
+
+8. Write a function to find the minimum and maximum value of an array 
+print("Minimum of 4,12,43.3,19 and 100 is : ",end="") 
+print (min( 4,12,43.3,19,100 ) ) 
+print("Maximum of 4,12,43.3,19 and 100 is : ",end="") 
+print (max( 4,12,43.3,19,100 ) ) 
+
+9. Write a function to reverse an array of integer values 
+fruits = ['apple', 'banana', 'cherry'] 
+fruits.reverse() 
+print(fruits) 
+
+10. Write a function to find the duplicate values of an array 
+arr = [1, 2, 3, 4, 2, 7, 8, 8, 3]; 
+print("Duplicate elements in given array: "); 
+   for i in range(0, len(arr)): 
+      for j in range(i+1, len(arr)):
+         if(arr[i] == arr[j]):
+            print(arr[j]); 
+
+11. Write a program to find the common values between two arrays 
+def common_member(a, b): 
+   a_set = set(a) 
+   b_set = set(b) 
+   if (a_set & b_set): 
+      print(a_set & b_set) 
+   else: 
+      print("No common elements") 
+a = [1, 2, 3, 4, 5] 
+b = [5, 6, 7, 8, 9] 
+common_member(a, b) 
+a = [1, 2, 3, 4, 5] 
+b = [6, 7, 8, 4, 5, 9] 
+common_member(a, b) 
+
+12. Write a method to remove duplicate elements from an array 
+mylist = ["a", "b", "a", "c", "c", "d"] 
+mylist = list(dict.fromkeys(mylist)) 
+print(mylist) 
+
+13. Write a method to find the second largest number in an array 
+list_val = [20, 30, 40, 25, 10] 
+list_val.sort() 
+print("The second largest element of the list is:", list_val[-2]) 
+
+14. Write a method to find the second largest number in an array 
+list_val = [20, 30, 40, 25, 10] \
+list_val.sort() 
+print("The second largest element of the list is:", list_val[-2]) 
+
+15. Write a method to find number of even number and odd numbers in an array
+def CountingEvenOdd(arr, arr_size):
+   even_count = 0 
+   odd_count = 0 
+   for i in range(arr_size):
+      if (arr[i] & 1 == 1): 
+         odd_count += 1 
+      else: 
+         even_count += 1 
+print("Number of even elements = ", even_count) 
+print("Number of odd elements = ", odd_count) 
+arr = [2, 3, 4, 5, 6] 
+n = len(arr) 
+CountingEvenOdd(arr, n) 
+
+16. Write a function to get the difference of largest and smallest value 
+arr = [10, 89, 9, 56, 4, 80, 8] 
+mini = arr[0] 
+maxi = arr[0] 
+for i in range(len(arr)): 
+   if arr[i] < mini:
+      mini = arr[i] 
+      if arr[i] > maxi:
+         maxi = arr[i] 
+         c=maxi-mini 
+         print("The Difference of largest and smallest value is :",c) 
+         
+17. Write a method to verify if the array contains two specified elements(12,23) 
+def test_duplicate(array_nums): 
+   nums_set = set(array_nums) 
+   return len(array_nums) != len(nums_set) 
+print(test_duplicate([1,2,3,4,5])) 
+print(test_duplicate([1,2,3,4, 4])) 
+print(test_duplicate([1,1,2,2,3,3,4,4,5])) 
+
+18. Write a program to remove the duplicate elements and return the new array 
+def Remove(duplicate):
+final_list = [] 
+for num in duplicate:
+   if num not in final_list:
+      final_list.append(num)
+      return final_list
+   duplicate = [2, 4, 10, 20, 5, 2, 20, 4] ]
+   print(Remove(duplicate)) 
